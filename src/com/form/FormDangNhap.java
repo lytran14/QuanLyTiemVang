@@ -10,6 +10,7 @@ public class FormDangNhap extends javax.swing.JDialog {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -46,8 +47,10 @@ public class FormDangNhap extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("WELCOME BACK!");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Mật Khẩu");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Tên Tài Khoản");
 
         jCheckBox1.setText("Lưu Mật Khẩu");
@@ -141,12 +144,13 @@ public class FormDangNhap extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        new Main().setVisible(true);
-        //dispose();      
+      
     }//GEN-LAST:event_loginActionPerformed
 
     private void lbQmkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbQmkMouseClicked
+        dispose();
         new FormQuenMatKhau().setVisible(true);
+
     }//GEN-LAST:event_lbQmkMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

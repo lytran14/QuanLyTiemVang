@@ -2,7 +2,6 @@ package com.component;
 
 import com.event.EventMenuSelected;
 import com.model.Model_Menu;
-import com.swing.MenuItem;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
@@ -11,7 +10,6 @@ import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 public class Menu extends javax.swing.JPanel {
@@ -53,7 +51,7 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addItem(new Model_Menu(" ", "Tài Khoản", Model_Menu.MenuType.TITLE));
         listMenu1.addItem(new Model_Menu("9", "Đăng Xuất", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("doimk", "Đổi Mật Khẩu", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("exit", "Thoát", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("ex", "Thoát", Model_Menu.MenuType.MENU));
 
         listMenu1.addItem(new Model_Menu("", "", Model_Menu.MenuType.EMPTY));
     }
@@ -101,8 +99,8 @@ public class Menu extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

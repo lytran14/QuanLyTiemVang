@@ -6,6 +6,7 @@ import com.form.FormCamDo;
 import com.form.FormCuaSoChao;
 import com.form.FormDangNhap;
 import com.form.FormDoiMatKhau;
+import com.form.FormGiaVang;
 import com.form.FormKhachHang;
 import com.form.FormLoaiSanPham;
 import com.form.FormMuaVao;
@@ -23,34 +24,30 @@ public class Main extends javax.swing.JFrame {
     private FormBanRa br;
     private FormMuaVao mv;
     private FormCamDo cd;
-//    private FormGiaVang gv;
-    private FormDoiMatKhau dmk;
-    //private FormDangNhap dn;
+    private FormGiaVang gv;
     private FormKhachHang kh;
     private FormNhanVien nv;
 
     public Main() {
         initComponents();
-        //setBackground(new Color(0, 0, 0, 0));
         tkKe = new FormThongKe();
         sp = new FormSanPham();
         lsp = new FormLoaiSanPham();
         br = new FormBanRa();
         mv = new FormMuaVao();
         cd = new FormCamDo();
-//        gv = new FormGiaVang();
+        gv = new FormGiaVang();
         kh = new FormKhachHang();
         nv = new FormNhanVien();
         new FormCuaSoChao(this, true).setVisible(true);
         new FormDangNhap(this, true).setVisible(true);
-        //dmk = new FormDoiMatKhau();
         menu.initMoving(Main.this);
         menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
                 System.out.println(".selected(): " + index);
-                if (index == 1) {
-                    //setForm(tkKe);
+                if (index == 7) {
+                    setForm(gv);
                 } else if (index == 2) {
                     setForm(sp);
                 } else if (index == 3) {
@@ -76,7 +73,6 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         });
-        //  set when system open start with home form
         setForm(new FormThongKe());
     }
 
@@ -104,6 +100,7 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout panelBorder2Layout = new javax.swing.GroupLayout(panelBorder2);
