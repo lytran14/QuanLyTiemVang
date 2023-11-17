@@ -1,5 +1,6 @@
 package com.form;
 
+//haha
 
 public class FormThongKe extends javax.swing.JPanel {
 
